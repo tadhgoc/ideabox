@@ -2,8 +2,8 @@ $bg-color: #ccc;
 $font-color: black;
 $box-text-color: #333;
 $paper-color: white;
-$button-color: red;
-$button-color-down: darkred;
+$button-color: #fff;
+$button-color-down: #ddd;
 
 
 // ==============
@@ -42,13 +42,12 @@ body {
   }
 
 
-  .idea-modal {
+  .idea-text {
     width: 300px;
     height: 50px;
 
     padding: 15px 5px;
-
-    background: white;
+    background: $paper-color;
 
   }
   .button {

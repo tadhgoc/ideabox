@@ -30,7 +30,7 @@ body {
   color: #333;
 }
 
-.main-wrap .idea-modal {
+.main-wrap .idea-text {
   width: 300px;
   height: 50px;
   padding: 15px 5px;
@@ -45,12 +45,12 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: 10px;
-  background-color: red;
+  background-color: #fff;
   transition: all 50ms;
 }
 
 .main-wrap .button:hover {
-  background-color: darkred;
+  background-color: #ddd;
 }
 
 .main-wrap .button:active {
