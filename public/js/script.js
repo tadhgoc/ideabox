@@ -29,5 +29,5 @@ function buildString(data) {
   result = "Use " + data.language + " to make " + data.word;
   console.log(result);
 
-  $(".idea").text(result);
+  $(".idea-text").text(result);
 }
