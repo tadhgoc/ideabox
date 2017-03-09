@@ -1,3 +1,8 @@
+$bg-color: beige;
+$font-color: black;
+
+
+// ==============
 * {
   padding: 0;
   margin: 0;
@@ -5,4 +10,32 @@
 
 body {
   font-family: arial;
+  background: $bg-color;
+}
+
+.main-wrap {
+
+  width: 80%;
+  margin: auto;
+  .box {
+    border: $bg-color solid 1px; //REMOVE
+    height: 100px;
+    width: 200px;
+
+    background-image: url('../box.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    .box-text {
+      margin-top: 35%;
+      margin-left: 20%;
+    }
+  }
+
+
+  @keyframes box-shake {
+    0% {
+      margin: auto;
+    }
+  }
 }

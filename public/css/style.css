@@ -5,4 +5,30 @@
 
 body {
   font-family: arial;
+  background: beige;
+}
+
+.main-wrap {
+  width: 80%;
+  margin: auto;
+}
+
+.main-wrap .box {
+  border: beige solid 1px;
+  height: 100px;
+  width: 200px;
+  background-image: url("../box.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.main-wrap .box .box-text {
+  margin-top: 35%;
+  margin-left: 20%;
+}
+
+@keyframes box-shake {
+  0% {
+    margin: auto;
+  }
 }
