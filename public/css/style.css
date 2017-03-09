@@ -4,7 +4,7 @@
 }
 
 body {
-  font-family: arial;
+  font-family: 'helvetica neue', arial;
   background: lightblue;
   margin: 20px;
 }
@@ -105,7 +105,7 @@ footer {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 @keyframes show {

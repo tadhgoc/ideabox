@@ -29,10 +29,12 @@ function tog() {
   $('.box').addClass("shake");
   $('.idea').removeClass('hidden');
   $('.idea').addClass("fly");
+  $('.button').addClass("hidden");
 }
 
 function showIdea() {
   console.log("called show idea");
+  $('.idea-expand').removeClass("hidden");
   $('.idea-expand').addClass("on");
   $('.idea').hide();
 
