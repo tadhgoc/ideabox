@@ -1,6 +1,7 @@
 $(function() {
   getData('/api/languages').then(function(json) {
     console.log(buildString(json));
+    $(".idea-modal").text(buildString(json));
   });
 
 });
@@ -20,7 +21,10 @@ function getData (api) {
 }
 
 function tog() {
+  $('.box').addClass("tip");
+  $('.ball').addClass("roll");
   $('.idea-modal').addClass("show-me");
+
 }
 
 function buildString(json) {
