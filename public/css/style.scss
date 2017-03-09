@@ -1,7 +1,9 @@
 $bg-color: #ccc;
 $font-color: black;
 $box-text-color: #333;
-$paper-color: red;
+$paper-color: white;
+$button-color: red;
+$button-color-down: darkred;
 
 
 // ==============
@@ -28,7 +30,7 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
 
-    z-index: 1;
+    z-index: 10;
 
     .box-text {
       margin-top: 35%;
@@ -40,7 +42,7 @@ body {
 
 
   .idea-modal {
-
+    display: none; //REMOVE
     width: 300px;
     height: 50px;
 
@@ -48,6 +50,25 @@ body {
 
     background: white;
 
+  }
+  .button {
+    height: 40px;
+    width: 130px;
+
+    margin: 0 0 100px 0;
+    text-align: center;
+
+    border-radius: 10px;
+
+    background-color: $button-color;
+
+    &:hover {
+      background-color: $button-color-down;
+    }
+
+    &:active {
+      transform: scale(1.05);
+    }
   }
 }
 
@@ -59,7 +80,9 @@ body {
 
   display: block;
   position: absolute;
-  z-index: 0;
+
+  left: 300px;
+  top: 374px;
 }
 
 
