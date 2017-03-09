@@ -1,6 +1,7 @@
 $bg-color: #ccc;
 $font-color: black;
 $box-text-color: #333;
+$paper-color: red;
 
 
 // ==============
@@ -27,6 +28,8 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
 
+    z-index: 1;
+
     .box-text {
       margin-top: 35%;
       margin-left: 20%;
@@ -35,12 +38,6 @@ body {
     }
   }
 
-
-  @keyframes box-shake {
-    0% {
-      margin: auto;
-    }
-  }
 
   .idea-modal {
 
@@ -54,20 +51,32 @@ body {
   }
 }
 
+.ball {
+  height: 30px;
+  width: 30px;
+  background-color: $paper-color;
+  border-radius: 50%;
+
+  display: block;
+  position: absolute;
+  z-index: 0;
+}
+
+
 .show-me{
-  animation: show 1s;
+  animation: show;
+  animation-delay: 2s;
+  animation-duration: 1s;
 }
 
-
-@keyframes show {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-
+.tip {
+  animation: tip 1s forwards;
 }
+
+.roll {
+  animation: spin 1s 2, roll 3s forwards;
+}
+
 h1 {
 
 }
@@ -79,4 +88,53 @@ h2 {
 
 footer {
   margin-top: 100px;
+}
+
+// ======== KEYFRAMES
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes tip {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(100deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(90deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  75% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes roll {
+  0% {
+    margin-left: 0%;
+  }
+  100% {
+    margin-left: 40%;
+  }
 }
