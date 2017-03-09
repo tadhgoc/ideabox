@@ -1,5 +1,6 @@
 $bg-color: beige;
 $font-color: black;
+$box-text-color: #333;
 
 
 // ==============
@@ -16,7 +17,7 @@ body {
 .main-wrap {
 
   width: 80%;
-  margin: auto;
+  margin: 100px auto;
   .box {
     border: $bg-color solid 1px; //REMOVE
     height: 100px;
@@ -29,6 +30,8 @@ body {
     .box-text {
       margin-top: 35%;
       margin-left: 20%;
+
+      color: $box-text-color;
     }
   }
 
@@ -38,4 +41,12 @@ body {
       margin: auto;
     }
   }
+
+  .idea-modal {
+    
+  }
+}
+
+footer {
+  margin-top: 100px;
 }
