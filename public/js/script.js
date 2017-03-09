@@ -1,6 +1,6 @@
 $(function() {
   getData('/api/languages').then(function(json) {
-    buildString(json);
+    console.log(buildString(json));
   });
 
 });
@@ -24,5 +24,5 @@ function tog() {
 }
 
 function buildString(json) {
-  return "Use C# to ITEM"; 
+  return "Use C# to ITEM";
 }
