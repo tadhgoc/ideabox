@@ -5,7 +5,7 @@
 
 body {
   font-family: arial;
-  background: #ccc;
+  background: lightblue;
   margin: 20px;
 }
 
@@ -15,7 +15,7 @@ body {
 }
 
 .main-wrap .box {
-  border: #ccc solid 1px;
+  border: lightblue solid 1px;
   height: 150px;
   width: 250px;
   background-image: url("../box.png");
@@ -70,6 +70,16 @@ body {
   position: absolute;
   display: block;
   bottom: 0px;
+  transition: all 50ms;
+}
+
+.idea:hover {
+  background-color: #ddd;
+  border-color: #ddd;
+}
+
+.idea:active {
+  transform: scale(1.1);
 }
 
 .shake {

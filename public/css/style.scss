@@ -1,4 +1,4 @@
-$bg-color: #ccc;
+$bg-color: lightblue;
 $font-color: black;
 $box-text-color: #333;
 $paper-color: white;
@@ -91,6 +91,17 @@ body {
   position: absolute;
   display: block;
   bottom: 0px;
+
+  transition: all 50ms;
+
+  &:hover {
+    background-color: $button-color-down;
+    border-color: $button-color-down;
+  }
+
+  &:active {
+    transform: scale(1.1);
+  }
 }
 
 .shake {
