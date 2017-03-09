@@ -75,8 +75,9 @@ body {
   animation: tip 1s forwards;
 }
 
-.roll {
-  animation: spin 1s 2, roll 3s forwards;
+.bounce {
+  animation: bounce 1s forwards;
+  animation-delay: 0.7s;
 }
 
 h2 {
@@ -109,25 +110,34 @@ footer {
   0% {
     transform: rotate(0deg);
   }
-  25% {
-    transform: rotate(90deg);
-  }
-  50% {
-    transform: rotate(180deg);
-  }
-  75% {
-    transform: rotate(270deg);
-  }
   100% {
-    transform: rotate(360deg);
+    transform: rotate(180deg);
   }
 }
 
 @keyframes roll {
   0% {
-    margin-left: 0%;
+    transform: translateX(0px);
   }
   100% {
-    margin-left: 40%;
+    transform: translateX(150px);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(100px);
+  }
+  25% {
+    transform: translateY(20px);
+  }
+  50% {
+    transform: translateY(100px);
+  }
+  75% {
+    transform: translateY(60px);
+  }
+  100% {
+    transform: translateY(100px);
   }
 }

@@ -22,7 +22,7 @@ function getData (api) {
 
 function tog() {
   $('.box').addClass("tip");
-  $('.ball').addClass("roll");
+  $('.ball').addClass("bounce");
   // $('.idea-modal').addClass("show-me");
 
 }
