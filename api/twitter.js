@@ -14,6 +14,6 @@ module.exports = (req, res, next) => {
   client.get('search/tweets', params, function(error, tweets, response) {
     if(error) return;
 
-    res.json(tweets);
+    res.json(tweets.statuses.map(status => status.id));
   });
 }
