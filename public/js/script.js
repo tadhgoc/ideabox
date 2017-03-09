@@ -1,3 +1,6 @@
+var lang;
+var item;
+
 $(function() {
   getLanguages('/api/languages');
 });
@@ -7,20 +10,17 @@ function tog() {
 }
 
 
-function getLanguages (url) {
-    fetch(url, {
+function getLanguages (api) {
+    fetch(api, {
         method: 'GET'
     })
     .then(function (res) {
         res.json()
         .then(function (json) {
-            console.log(json);
-            randomise(json);
+          lang = randomise(json);
+          console.log("here", lang);
         });
     })
-    .catch(function (err) {
-        console.error(err)
-    });
 }
 
 function randomise(json) {
