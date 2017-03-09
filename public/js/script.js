@@ -1,6 +1,6 @@
 $(function() {
   getData('/api/randomise');
-  $('.idea-text').hide();
+  $('.idea-expand').hide();
 });
 
 function getData (api) {
@@ -32,5 +32,6 @@ function tog() {
 
 function showIdea() {
   console.log("called show idea");
-  $('.idea-text').show();
+  $('.idea-expand').show(); //handle this with transistions? 
+  $('.idea').hide();
 }
