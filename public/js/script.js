@@ -1,6 +1,6 @@
 $(function() {
   getData('/api/randomise');
-  $('.idea-expand').hide();
+  // $('.idea-text').hide();
 });
 
 function getData (api) {
@@ -27,11 +27,22 @@ function buildString(data) {
 
 function tog() {
   $('.box').addClass("shake");
+  $('.idea').removeClass('hidden');
   $('.idea').addClass("fly");
 }
 
 function showIdea() {
   console.log("called show idea");
-  $('.idea-expand').show(); //handle this with transistions? 
+  $('.idea-expand').addClass("on");
   $('.idea').hide();
+
+  var expIdea = document.getElementById("idea-expand");
+  expIdea.addEventListener("webkitAnimationEnd", showIdeaText);
+}
+
+
+
+function showIdeaText() {
+  $('.idea-text').removeClass('hidden');
+
 }

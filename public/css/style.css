@@ -31,7 +31,7 @@ body {
 }
 
 .main-wrap .idea-expand {
-  width: 300px;
+  width: 5px;
   height: 50px;
   padding: 15px 5px;
   background: white;
@@ -70,6 +70,7 @@ body {
   position: absolute;
   display: block;
   bottom: 0px;
+  transform: scale(0.05);
   transition: all 50ms;
 }
 
@@ -84,12 +85,15 @@ body {
 
 .shake {
   animation: shake 1s forwards;
-  animation-delay: 0.7s;
 }
 
 .fly {
   animation: fly 1s forwards;
-  animation-delay: 1.4s;
+  animation-delay: .7s;
+}
+
+.on {
+  animation: expand 2s forwards;
 }
 
 h2 {
@@ -98,6 +102,10 @@ h2 {
 
 footer {
   margin-top: 100px;
+}
+
+.hidden {
+  display: none;
 }
 
 @keyframes show {
@@ -153,5 +161,14 @@ footer {
   100% {
     transform: scale(1);
     bottom: 150px;
+  }
+}
+
+@keyframes expand {
+  0% {
+    width: 5px;
+  }
+  100% {
+    width: 300px;
   }
 }

@@ -43,7 +43,7 @@ body {
 
 
   .idea-expand {
-    width: 300px;
+    width: 5px;
     height: 50px;
 
     padding: 15px 5px;
@@ -92,6 +92,8 @@ body {
   display: block;
   bottom: 0px;
 
+  transform: scale(0.05);
+
   transition: all 50ms;
 
   &:hover {
@@ -106,12 +108,16 @@ body {
 
 .shake {
   animation: shake 1s forwards;
-  animation-delay: 0.7s;
 }
 
 .fly {
   animation: fly 1s forwards;
-  animation-delay: 1.4s;
+  animation-delay: .7s;
+}
+
+
+.on {
+    animation: expand 2s forwards;
 }
 
 h1 {
@@ -125,6 +131,10 @@ h2 {
 
 footer {
   margin-top: 100px;
+}
+
+.hidden {
+  display: none;
 }
 
 // ======== KEYFRAMES
@@ -154,4 +164,9 @@ footer {
 @keyframes fly {
   0% {transform: scale(0.05); bottom: 0px;}
   100% {transform: scale(1); bottom: 150px;}
+}
+
+@keyframes expand {
+  0% {width: 5px;}
+  100% {width: 300px;}
 }
