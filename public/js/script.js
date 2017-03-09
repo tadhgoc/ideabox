@@ -1,19 +1,16 @@
 $(function() {
-  getData('/api/randomise').then(function(json) {
-    console.log(buildString(json));
-    $(".idea-modal").text(buildString(json));
-  });
-
+  getData('/api/randomise');
 });
 
 function getData (api) {
-    return fetch(api, {
+    fetch(api, {
         method: 'GET'
     })
     .then(function (res) {
         res.json()
         .then(function (json) {
-          return json;
+          console.log(json);
+          buildString(json);
         });
     }).catch(function (err) {
         console.error(err)
@@ -28,6 +25,9 @@ function tog() {
 
 }
 
-function buildString(json) {
-  return "Use C# to ITEM";
+function buildString(data) {
+  result = "Use " + data.language + " to make " + data.word;
+  console.log(result);
+
+  $(".idea").text(result);
 }
