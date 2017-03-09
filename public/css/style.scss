@@ -47,7 +47,6 @@ body {
 
   .idea-expand {
     width: 5px;
-    height: 50px;
 
     padding: 15px 5px;
     background: $paper-color;
@@ -171,5 +170,5 @@ footer {
 
 @keyframes expand {
   0% {width: 5px;}
-  100% {width: 300px;}
+  100% {width: 400px;}
 }

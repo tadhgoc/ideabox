@@ -32,7 +32,6 @@ body {
 
 .main-wrap .idea-expand {
   width: 5px;
-  height: 50px;
   padding: 15px 5px;
   background: white;
 }
@@ -169,6 +168,6 @@ footer {
     width: 5px;
   }
   100% {
-    width: 300px;
+    width: 400px;
   }
 }
