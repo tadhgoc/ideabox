@@ -1,6 +1,7 @@
 $(function() {
   getData('/api/languages').then(function(json) {
     console.log(buildString(json));
+    $(".idea-modal").text(buildString(json));
   });
 
 });
