@@ -5,14 +5,12 @@ const _ = require('lodash')
 
 
 module.exports = (req, res, next) => {
-  getRandomLanguage()
-  .then((language) => {
-    console.log('then', language);
-    const word = getRandomWord();
-    res.json({
-      word,
-      language
-    });
+  const language = getRandomLanguage()
+  const word = getRandomWord();
+
+  res.json({
+    word,
+    language
   });
 }
 
@@ -21,35 +19,33 @@ function getRandomWord() {
   return words[index];
 }
 
+
 function getRandomLanguage() {
-  return trending()
-  .then(repos => {
-      let languages = []
-      const languagesWithNumber = _.countBy(repos, repo => repo.language);
+  getTrendingLanguages();
 
-      _.forOwn(languagesWithNumber, (count, language) => {
-        if (language !== '') {
-          languages.push(language);
-        }
-      });
-
-      const index = parseInt(Math.random() * languages.length);
-      return languages[index];
-  });
+  const index = parseInt(Math.random() * trendingLanguages.length);
+  return trendingLanguages[index];
 }
 
-// function getRandomLanguage() {
-//   console.log('getRandomLanguage');
-//   return trending()
-//   .then(repos => {
-//       console.log('getRandomLanguage then');
-//       let languages = []
-//       const languagesWithNumber = _.countBy(repos, repo => repo.language);
 
-//       _.forOwn(languagesWithNumber, (count, language) => {
-//         if (language !== '') {
-//           languages.push(language);
-//         }
-//       });
-//   });
-// }
+let trendingLanguages = [];
+let lastCheck = 0;
+function getTrendingLanguages() {
+  const millisecondsPerMinute = 60000;
+  if (lastCheck > (Date.now() - millisecondsPerMinute)) return;
+
+  lastCheck = Date.now();
+  trending()
+  .then(repos => {
+    let languages = []
+    let languagesWithNumber = _.countBy(repos, repo => repo.language);
+
+    _.forOwn(languagesWithNumber, (count, language) => {
+      if (language !== '') {
+        languages.push(language);
+      }
+    });
+
+    trendingLanguages = languages;
+  });
+}
