@@ -37,18 +37,26 @@ function buildTweet(word, api) {
   .then(function (res) {
       res.json()
       .then(function (json) {
-        console.log(json);
-        twttr.widgets.createTweet(
-          '20',
-          document.getElementById('tweet'),
-          {
-            theme: 'light'
-          }
-        );
+        $.each(json, function(index, tweetId){
+          $('.tweets').append("<div id='tweet" + index + "'></div>");
+          var id = tweetId.toString();
+          console.log(id);
+          makeTweet(index, id);
+        });
       });
   }).catch(function (err) {
       console.error(err)
   });
+}
+function makeTweet(index, id) {
+  var css = 'tweet' + index;
+  twttr.widgets.createTweet(
+    id,
+    document.getElementById(css),
+    {
+      theme: 'light'
+    }
+  );
 }
 
 function tog() {
