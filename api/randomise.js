@@ -23,6 +23,8 @@ function getRandomWord() {
 function getRandomLanguage() {
   getTrendingLanguages();
 
+  if (trendingLanguages.length === 0) return 'JavaScript';
+
   const index = parseInt(Math.random() * trendingLanguages.length);
   return trendingLanguages[index];
 }
