@@ -23,6 +23,25 @@ function buildString(data) {
   console.log(result);
 
   $(".idea-text").text(result);
+
+  buildTweet(data.word, '/api/twitter?q=');
+}
+
+function buildTweet(word, api) {
+  api = api + word;
+  console.log(api);
+
+  fetch(api, {
+      method: 'GET'
+  })
+  .then(function (res) {
+      res.json()
+      .then(function (json) {
+        console.log(json);
+      });
+  }).catch(function (err) {
+      console.error(err)
+  });
 }
 
 function tog() {
