@@ -1,35 +1,28 @@
-var lang;
-var item;
-
 $(function() {
-  getLanguages('/api/languages');
+  getData('/api/languages').then(function(json) {
+    buildString(json);
+  });
+
 });
 
-function tog() {
-  $('.idea-modal').addClass("show-me");
-}
-
-
-function getLanguages (api) {
-    fetch(api, {
+function getData (api) {
+    return fetch(api, {
         method: 'GET'
     })
     .then(function (res) {
         res.json()
         .then(function (json) {
-          lang = randomise(json);
-          console.log("here", lang);
+          return json;
         });
-    })
+    }).catch(function (err) {
+        console.error(err)
+    });
 }
 
-function randomise(json) {
+function tog() {
+  $('.idea-modal').addClass("show-me");
+}
 
-  // make a random number
-  var random = (Math.random() * 1000);
-
-  // pick index
-  var pick =  parseInt(random) % json.length;
-
-  return json[pick];
+function buildString(json) {
+  return "Use C# to ITEM"; 
 }
