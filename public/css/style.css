@@ -10,7 +10,7 @@ body {
 
 .main-wrap {
   width: 80%;
-  margin: auto;
+  margin: 100px auto;
 }
 
 .main-wrap .box {
@@ -25,10 +25,15 @@ body {
 .main-wrap .box .box-text {
   margin-top: 35%;
   margin-left: 20%;
+  color: #333;
 }
 
 @keyframes box-shake {
   0% {
     margin: auto;
   }
+}
+
+footer {
+  margin-top: 100px;
 }
