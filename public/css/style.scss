@@ -23,8 +23,8 @@ body {
   margin: 100px auto;
   .box {
     border: $bg-color solid 1px; //REMOVE
-    height: 100px;
-    width: 200px;
+    height: 150px;
+    width: 250px;
 
     background-image: url('../box.png');
     background-size: contain;
@@ -42,7 +42,6 @@ body {
 
 
   .idea-modal {
-    display: none; //REMOVE
     width: 300px;
     height: 50px;
 
@@ -52,29 +51,33 @@ body {
 
   }
   .button {
+    display: flex;
     height: 40px;
     width: 130px;
 
     margin: 0 0 100px 0;
-    text-align: center;
+    align-items: center;
+    justify-content: center;
 
     border-radius: 10px;
 
     background-color: $button-color;
+
+    transition: all 50ms;
 
     &:hover {
       background-color: $button-color-down;
     }
 
     &:active {
-      transform: scale(1.05);
+      transform: scale(1.1);
     }
   }
 }
 
 .ball {
-  height: 30px;
-  width: 30px;
+  height: 50px;
+  width: 50px;
 
   border: $paper-color solid 2px ;
 
@@ -94,20 +97,14 @@ body {
   top: 374px;
 }
 
-
-.show-me{
-  animation: show;
-  animation-delay: 2s;
-  animation-duration: 1s;
-}
-
-.tip {
-  animation: tip 1s forwards;
-}
-
-.bounce {
-  animation: bounce 1s forwards;
+.shake {
+  animation: shake 1s forwards;
   animation-delay: 0.7s;
+}
+
+.fly {
+  animation: fly 1s forwards;
+  animation-delay: 1.4s;
 }
 
 h1 {
@@ -133,39 +130,21 @@ footer {
   }
 }
 
-@keyframes tip {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(190deg);
-  }
+@keyframes shake {
+  5% {transform: translateX(0px);}
+  10% {transform: translateX(-40px);}
+  20% {transform: translateX(60px);}
+  30% {transform: translateX(-40px);}
+  40% {transform: translateX(60px);}
+  50% {transform: translateX(-40px);}
+  60% {transform: translateX(40px);}
+  70% {transform: translateX(-40px);}
+  80% {transform: translateX(60px);}
+  95% {transform: translateX(-60px);}
+  100% {transform: translateX(0px);}
 }
 
-
-@keyframes bounce {
-  0% {
-    transform: translateY(0px);
-  }
-  25% {
-    transform: translateY(200px);
-  }
-  50% {
-    transform: translateY(70px);
-  }
-  55% {
-    transform: translateY(70px);
-  }
-  60% {
-    transform: translateY(200px);
-  }
-  70% {
-    transform: translateY(120px);
-  }
-  75% {
-    transform: translateY(120px);
-  }
-  100% {
-    transform: translateY(200px);
-  }
+@keyframes fly {
+  0% {transform: scale(0.1); margin-top: 100px;}
+  100% {transform: scale(1); margin-top: 0px;}
 }

@@ -21,8 +21,8 @@ function getData (api) {
 }
 
 function tog() {
-  $('.box').addClass("tip");
-  $('.ball').addClass("bounce");
+  $('.box').addClass("shake");
+  $('.ball').addClass("fly");
   // $('.idea-modal').addClass("show-me");
 
 
