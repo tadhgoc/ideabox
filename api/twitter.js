@@ -11,6 +11,7 @@ const client = new Twitter({
 
 module.exports = (req, res, next) => {
   const params = req.query;
+  params.q = `"${params.q}"`
   client.get('search/tweets', params, function(error, tweets, response) {
     if(error) return;
 
