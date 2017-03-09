@@ -15,6 +15,7 @@ $button-color-down: darkred;
 body {
   font-family: arial;
   background: $bg-color;
+  margin: 20px;
 }
 
 .main-wrap {
@@ -79,7 +80,8 @@ body {
   height: 50px;
   width: 50px;
 
-  border: $paper-color solid 2px ;
+  border: $paper-color solid 2px;
+  border-radius: 50%;
 
   background-color: $paper-color;
   background-image: url('../light.png');
@@ -87,14 +89,9 @@ body {
   background-position: center;
   background-repeat: no-repeat;
 
-
-  border-radius: 50%;
-
-  display: block;
   position: absolute;
-
-  left: 200px;
-  top: 374px;
+  display: block;
+  bottom: 0px;
 }
 
 .shake {
@@ -145,6 +142,6 @@ footer {
 }
 
 @keyframes fly {
-  0% {transform: scale(0.1); margin-top: 100px;}
-  100% {transform: scale(1); margin-top: 0px;}
+  0% {transform: scale(0.05); bottom: 0px;}
+  100% {transform: scale(1); bottom: 150px;}
 }
