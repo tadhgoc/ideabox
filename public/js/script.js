@@ -31,5 +31,3 @@ function tog() {
 function buildString(json) {
   return "Use C# to ITEM";
 }
-
-$().addEventListener('transitionend', removeTransition)

@@ -57,11 +57,16 @@ body {
 .ball {
   height: 30px;
   width: 30px;
+  border: white solid 2px;
   background-color: white;
+  background-image: url("../light.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
   border-radius: 50%;
   display: block;
   position: absolute;
-  left: 300px;
+  left: 200px;
   top: 374px;
 }
 
@@ -102,42 +107,33 @@ footer {
     transform: rotate(0deg);
   }
   100% {
-    transform: rotate(100deg);
-  }
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(180deg);
-  }
-}
-
-@keyframes roll {
-  0% {
-    transform: translateX(0px);
-  }
-  100% {
-    transform: translateX(150px);
+    transform: rotate(190deg);
   }
 }
 
 @keyframes bounce {
   0% {
-    transform: translateY(100px);
+    transform: translateY(0px);
   }
   25% {
-    transform: translateY(20px);
+    transform: translateY(200px);
   }
   50% {
-    transform: translateY(100px);
+    transform: translateY(70px);
+  }
+  55% {
+    transform: translateY(70px);
+  }
+  60% {
+    transform: translateY(200px);
+  }
+  70% {
+    transform: translateY(120px);
   }
   75% {
-    transform: translateY(60px);
+    transform: translateY(120px);
   }
   100% {
-    transform: translateY(100px);
+    transform: translateY(200px);
   }
 }
