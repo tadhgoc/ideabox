@@ -25,6 +25,7 @@ function tog() {
   $('.ball').addClass("bounce");
   // $('.idea-modal').addClass("show-me");
 
+
 }
 
 function buildString(json) {
