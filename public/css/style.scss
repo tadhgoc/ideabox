@@ -4,6 +4,9 @@ $box-text-color: #333;
 $paper-color: white;
 $button-color: #fff;
 $button-color-down: #ddd;
+$font1: font-family: 'VT323', monospace;
+$font2: font-family: 'Alfa Slab One', cursive;
+$font3: font-family: 'Black Ops One', cursive;
 
 
 // ==============
@@ -134,7 +137,7 @@ footer {
 }
 
 .hidden {
-  display: none !important; 
+  display: none !important;
 }
 
 // ======== KEYFRAMES
