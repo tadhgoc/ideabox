@@ -19,12 +19,14 @@ function getData (api) {
 }
 
 function buildString(data) {
-  result = "Use " + data.language + " to make " + data.word;
+  result = "Use <span class='keyword'>" + data.language + "</span> to make <span class='keyword'>" + data.word + "</span>";
   console.log(result);
 
-  $(".idea-text").text(result);
+  $(".idea-text").html(result);
 
-  buildTweet(data.word, '/api/twitter?q=');
+  $('.tweets').append("How hot is <span class='keyword'>" + data.word + "</span>? Check out these tweets:");
+  buildTweet(data.word, '/api/twitter?count=3&q=');
+
 }
 
 function buildTweet(word, api) {
@@ -67,7 +69,6 @@ function tog() {
 }
 
 function showIdea() {
-  console.log("called show idea");
   $('.idea-expand').removeClass("hidden");
   $('.idea-expand').addClass("on");
   $('.idea').hide();
@@ -80,5 +81,6 @@ function showIdea() {
 
 function showIdeaText() {
   $('.idea-text').removeClass('hidden');
+  $('.tweets').removeClass('hidden');
 
 }
