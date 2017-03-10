@@ -15,6 +15,15 @@ module.exports = (req, res, next) => {
   client.get('search/tweets', params, function(error, tweets, response) {
     if(error) return;
 
-    res.json(tweets.statuses.map(status => status.id_str));
+    if(tweets.statuses.length === 0) {
+      params.q = '#fail filter:safe :) filter:twimg';
+      client.get('search/tweets', params, function(error, tweets, response) {
+        if(error) return;
+
+        res.json({isFail: true, tweets: tweets.statuses.map(status => status.id_str)});
+      });
+    } else {
+      res.json({isFail: false, tweets: tweets.statuses.map(status => status.id_str)});
+    }
   });
 }
