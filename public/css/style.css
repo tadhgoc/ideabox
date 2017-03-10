@@ -37,7 +37,7 @@ body {
 }
 
 .main-wrap .idea-expand {
-  font-size: 26pt;
+  font-size: 30pt;
   text-align: center;
   width: 100%;
   padding: 15px 20px;
@@ -47,7 +47,7 @@ body {
 .main-wrap .idea-expand .keyword {
   font-family: monospace;
   color: #333;
-  font-size: 26pt;
+  font-size: 30pt;
   background-color: #f2f2f2;
   padding: 2px 5px;
 }
@@ -57,7 +57,7 @@ body {
 }
 
 .main-wrap .idea-header .resources {
-  margin: 10px 0;
+  margin: 20px 0;
   font-size: 16pt;
 }
 
@@ -76,7 +76,7 @@ body {
   padding: 15px 20px;
   background: white;
   border-radius: 15px;
-  margin: 20px auto;
+  margin: 0 auto;
 }
 
 .main-wrap .idea-box .keyword {

@@ -54,7 +54,7 @@ body {
 
 
   .idea-expand {
-    font-size: 26pt;
+    font-size: 30pt;
     text-align: center;
 
     width: 100%;
@@ -66,7 +66,7 @@ body {
     .keyword {
       font-family: $keyword-font;
       color: $keyword-color;
-      font-size: 26pt;
+      font-size: 30pt;
       background-color: $keyword-bg;
       padding: 2px 5px;
     }
@@ -77,7 +77,7 @@ body {
     margin-bottom: 30px;
 
     .resources {
-      margin: 10px 0;
+      margin: 20px 0;
       font-size: 16pt;
 
       a {
@@ -101,7 +101,7 @@ body {
         font-size: 16pt;
       }
 
-    margin: 20px auto;
+    margin: 0 auto;
 
   }
 
@@ -201,6 +201,7 @@ footer {
 
 .hidden {
   display: none !important;
+  // opacity: 0;
 }
 
 // ======== KEYFRAMES
