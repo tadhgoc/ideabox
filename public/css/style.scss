@@ -7,10 +7,8 @@ $button-color-down: #ddd;
 $keyword-color: #333;
 $keyword-bg: #ddd;
 
-$font1: 'VT323', monospace;
-$font2: 'Alfa Slab One', cursive;
-$font3: 'Black Ops One', cursive;
-$font-keyword: monospace;
+$box-font: 'Black Ops One', cursive;
+$keyword-font: monospace;
 
 
 // ==============
@@ -45,22 +43,46 @@ body {
       margin-left: 20%;
 
       color: $box-text-color;
-      font-family: $font3;
+      font-family: $box-font;
     }
   }
 
 
   .idea-expand {
+    font-size: 26pt;
+    text-align: center;
+
+    width: 100%;
+
+    padding: 15px 20px;
+    margin: 0 auto 30px auto;
+
+
+    .keyword {
+      font-family: $keyword-font;
+      color: $keyword-color;
+      font-size: 26pt;
+      background-color: $keyword-bg;
+      padding: 2px 5px;
+    }
+
+  }
+
+  .idea-box {
     font-size: 14pt;
     width: 5px;
 
     padding: 15px 20px;
     background: $paper-color;
     border-radius: 15px;
+
+    .keyword {
+      font-size: 16pt;
+    }
   }
 
   .tweets {
-    margin: 30px 0;
+    margin: 30px;
   }
 
   .button {
@@ -87,15 +109,6 @@ body {
     }
   }
 }
-
-.keyword {
-  font-family: $font-keyword;
-  color: $keyword-color;
-  font-size: 14pt;
-  background-color: $keyword-bg;
-  padding: 2px 5px;
-}
-
 
 .idea {
   height: 50px;
@@ -197,5 +210,5 @@ footer {
 
 @keyframes expand {
   0% {width: 5px;}
-  100% {width: 400px;}
+  100% {width: 80%;}
 }

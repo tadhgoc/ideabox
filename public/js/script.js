@@ -89,7 +89,7 @@ function tog() {
 
 function showIdea() {
   $('.idea-expand').removeClass("hidden");
-  $('.idea-expand').addClass("on");
+  $('.idea-box').addClass("on");
   $('.idea').hide();
 
   var expIdea = document.getElementById("idea-expand");
