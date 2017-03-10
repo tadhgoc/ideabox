@@ -59,6 +59,7 @@ body {
 .main-wrap .idea-header .resources {
   margin: 20px 0;
   font-size: 16pt;
+  font-style: italic;
 }
 
 .main-wrap .idea-header .resources a {
