@@ -30,9 +30,10 @@ body {
 .main-wrap .box .box-text {
   color: #333;
   font-family: "Black Ops One", cursive;
+  font-size: 15pt;
   position: absolute;
   bottom: 30px;
-  left: 65px;
+  left: 60px;
 }
 
 .main-wrap .idea-expand {
