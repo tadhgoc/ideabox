@@ -100,25 +100,39 @@ footer {
     opacity: 1; } }
 
 @keyframes shake {
-  5% {
-    transform: translateX(0px); }
   10% {
     transform: translateX(-40px); }
+  15% {
+    transform: translateY(-20px); }
   20% {
     transform: translateX(60px); }
+  25% {
+    transform: translateY(60px); }
   30% {
     transform: translateX(-40px); }
+  35% {
+    transform: translateY(-20px); }
   40% {
     transform: translateX(60px); }
+  45% {
+    transform: translateY(60px); }
   50% {
     transform: translateX(-40px); }
+  55% {
+    transform: translateY(-20px); }
   60% {
     transform: translateX(40px); }
+  65% {
+    transform: translateY(60px); }
   70% {
     transform: translateX(-40px); }
+  75% {
+    transform: translateY(-20px); }
   80% {
     transform: translateX(60px); }
-  95% {
+  85% {
+    transform: translateY(60px); }
+  90% {
     transform: translateX(-60px); }
   100% {
     transform: translateX(0px); } }
