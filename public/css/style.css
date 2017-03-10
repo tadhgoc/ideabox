@@ -10,113 +10,6 @@ body {
 
 .main-wrap {
   width: 80%;
-<<<<<<< 9e8a3a443ae1d52310d81b0e537dcf8c340184b6
-  margin: 60px auto;
-}
-
-.main-wrap .box {
-  border: #ADD8E6 solid 1px;
-  height: 150px;
-  width: 250px;
-  margin: 40px auto;
-  position: relative;
-  background-image: url("../box.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  z-index: 10;
-}
-
-.main-wrap .box .box-text {
-  color: #333;
-  font-family: "Black Ops One", cursive;
-  font-size: 15pt;
-  position: absolute;
-  bottom: 30px;
-  left: 60px;
-}
-
-.main-wrap .idea-expand {
-  font-size: 30pt;
-  text-align: center;
-  width: 100%;
-  padding: 15px 20px;
-  margin: 0 auto 30px auto;
-}
-
-.main-wrap .idea-expand .keyword {
-  font-family: monospace;
-  color: #333;
-  font-size: 30pt;
-  background-color: #f2f2f2;
-  padding: 2px 5px;
-}
-
-.main-wrap .idea-header {
-  margin-bottom: 30px;
-  animation: fade 3s;
-}
-
-.main-wrap .idea-header .resources {
-  margin: 20px 0;
-  font-size: 16pt;
-}
-
-.main-wrap .idea-header .resources a {
-  text-decoration: underline;
-  color: black;
-}
-
-.main-wrap .idea-header .resources a:hover {
-  color: #2a7189;
-}
-
-.main-wrap .idea-box {
-  font-size: 14pt;
-  width: 5px;
-  padding: 15px 20px;
-  background: white;
-  border-radius: 15px;
-  margin: 0 auto;
-}
-
-.main-wrap .idea-box .keyword {
-  font-size: 16pt;
-}
-
-.main-wrap .tweets {
-  margin: 30px;
-}
-
-.main-wrap .tweets .solo-tweet {
-  margin: 40px 10px;
-}
-
-.main-wrap .tweets .solo-tweet .twitter-tweet {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.main-wrap .button {
-  display: inline;
-  padding: 20px 15px;
-  margin: 40px auto;
-  align-items: center;
-  justify-content: center;
-  border-radius: 10px;
-  background-color: #fff;
-  transition: all 50ms;
-}
-
-.main-wrap .button:hover {
-  background-color: #63b4cf;
-  cursor: pointer;
-  cursor: hand;
-}
-
-.main-wrap .button:active {
-  transform: scale(1.1);
-}
-=======
   margin: 100px auto;
   position: relative; }
   .main-wrap .box {
@@ -130,11 +23,12 @@ body {
     .main-wrap .box .box-text {
       color: #333;
       font-family: "Black Ops One", cursive;
+      font-size: 15pt;
       position: absolute;
       bottom: 30px;
-      left: 65px; }
+      left: 60px; }
   .main-wrap .idea-expand {
-    font-size: 26pt;
+    font-size: 30pt;
     text-align: center;
     width: 100%;
     padding: 15px 20px;
@@ -142,13 +36,14 @@ body {
     .main-wrap .idea-expand .keyword {
       font-family: monospace;
       color: #333;
-      font-size: 26pt;
+      font-size: 30pt;
       background-color: #f2f2f2;
       padding: 2px 5px; }
   .main-wrap .idea-header {
-    margin-bottom: 30px; }
+    margin-bottom: 30px;
+    animation: fade 3s; }
     .main-wrap .idea-header .resources {
-      margin: 10px 0;
+      margin: 20px 0;
       font-size: 16pt; }
       .main-wrap .idea-header .resources a {
         text-decoration: underline;
@@ -161,13 +56,16 @@ body {
     padding: 15px 20px;
     background: white;
     border-radius: 15px;
-    margin: 20px auto; }
+    margin: 0 auto; }
     .main-wrap .idea-box .keyword {
       font-size: 16pt; }
   .main-wrap .tweets {
     margin: 30px; }
     .main-wrap .tweets .solo-tweet {
-      margin: 10px; }
+      margin: 40px 10px; }
+      .main-wrap .tweets .solo-tweet .twitter-tweet {
+        margin-left: auto;
+        margin-right: auto; }
   .main-wrap .button {
     display: inline;
     padding: 20px 15px;
@@ -183,7 +81,6 @@ body {
       cursor: hand; }
     .main-wrap .button:active {
       transform: scale(1.1); }
->>>>>>> lightbulb
 
 .idea {
   height: 50px;
@@ -285,26 +182,14 @@ footer {
 
 @keyframes expand {
   0% {
-<<<<<<< 9e8a3a443ae1d52310d81b0e537dcf8c340184b6
     width: 0px;
-    opacity: 0;
-  }
+    opacity: 0; }
   100% {
     width: 80%;
-    opacity: 1;
-  }
-}
+    opacity: 1; } }
 
 @keyframes fade {
   from {
-    opacity: 0;
-  }
+    opacity: 0; }
   to {
-    opacity: 1;
-  }
-}
-=======
-    width: 5px; }
-  100% {
-    width: 80%; } }
->>>>>>> lightbulb
+    opacity: 1; } }
