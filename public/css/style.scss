@@ -21,6 +21,7 @@ body {
   font-family: 'helvetica neue', arial;
   background: $bg-color;
   margin: 20px;
+  text-align: center
 }
 
 .main-wrap {
@@ -31,6 +32,8 @@ body {
     border: $bg-color solid 1px; //REMOVE
     height: 150px;
     width: 250px;
+    margin: 40px auto;
+    position: relative;
 
     background-image: url('../box.png');
     background-size: contain;
@@ -39,11 +42,12 @@ body {
     z-index: 10;
 
     .box-text {
-      margin-top: 35%;
-      margin-left: 20%;
-
       color: $box-text-color;
+
       font-family: $box-font;
+      position: absolute;
+      bottom: 30px;
+      left: 65px;
     }
   }
 
@@ -92,10 +96,12 @@ body {
     padding: 15px 20px;
     background: $paper-color;
     border-radius: 15px;
-
       .keyword {
         font-size: 16pt;
       }
+
+    margin: 20px auto;
+
   }
 
   .tweets {
@@ -111,7 +117,7 @@ body {
     height: 40px;
     width: 130px;
 
-    margin: 0 0 100px 0;
+    margin: 40px auto;
     align-items: center;
     justify-content: center;
 
