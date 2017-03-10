@@ -1,4 +1,4 @@
-$bg-color: lightblue;
+$bg-color: #ADD8E6;
 $font-color: black;
 $box-text-color: #333;
 $paper-color: white;
@@ -68,6 +68,23 @@ body {
 
   }
 
+  .idea-header {
+    margin-bottom: 30px;
+
+    .resources {
+      margin: 10px 0;
+      font-size: 16pt;
+
+      a {
+        text-decoration: underline;
+        color: $font-color;
+        &:hover {
+          color: #2a7189;
+        }
+      }
+    }
+  }
+
   .idea-box {
     font-size: 14pt;
     width: 5px;
@@ -76,13 +93,17 @@ body {
     background: $paper-color;
     border-radius: 15px;
 
-    .keyword {
-      font-size: 16pt;
-    }
+      .keyword {
+        font-size: 16pt;
+      }
   }
 
   .tweets {
     margin: 30px;
+
+    .solo-tweet {
+        margin: 10px;
+    }
   }
 
   .button {

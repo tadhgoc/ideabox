@@ -5,7 +5,7 @@
 
 body {
   font-family: 'helvetica neue', arial;
-  background: lightblue;
+  background: #ADD8E6;
   margin: 20px;
 }
 
@@ -15,7 +15,7 @@ body {
 }
 
 .main-wrap .box {
-  border: lightblue solid 1px;
+  border: #ADD8E6 solid 1px;
   height: 150px;
   width: 250px;
   background-image: url("../box.png");
@@ -47,6 +47,24 @@ body {
   padding: 2px 5px;
 }
 
+.main-wrap .idea-header {
+  margin-bottom: 30px;
+}
+
+.main-wrap .idea-header .resources {
+  margin: 10px 0;
+  font-size: 16pt;
+}
+
+.main-wrap .idea-header .resources a {
+  text-decoration: underline;
+  color: black;
+}
+
+.main-wrap .idea-header .resources a:hover {
+  color: #2a7189;
+}
+
 .main-wrap .idea-box {
   font-size: 14pt;
   width: 5px;
@@ -61,6 +79,10 @@ body {
 
 .main-wrap .tweets {
   margin: 30px;
+}
+
+.main-wrap .tweets .solo-tweet {
+  margin: 10px;
 }
 
 .main-wrap .button {
