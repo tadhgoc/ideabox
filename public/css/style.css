@@ -87,7 +87,12 @@ body {
 }
 
 .main-wrap .tweets .solo-tweet {
-  margin: 10px;
+  margin: 40px 10px;
+}
+
+.main-wrap .tweets .solo-tweet .twitter-tweet {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .main-wrap .button {

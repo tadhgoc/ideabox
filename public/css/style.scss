@@ -108,7 +108,12 @@ body {
     margin: 30px;
 
     .solo-tweet {
-        margin: 10px;
+        margin: 40px 10px;
+
+        .twitter-tweet {
+          margin-left: auto;
+          margin-right: auto;
+        }
     }
   }
 
