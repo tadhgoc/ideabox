@@ -12,49 +12,6 @@ body {
 
 .main-wrap {
   width: 80%;
-  margin: 100px auto; }
-  .main-wrap .box {
-    border: lightblue solid 1px;
-    height: 150px;
-    width: 250px;
-    margin: 40px auto;
-    position: relative;
-    background-image: url("../box.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    z-index: 10; }
-    .main-wrap .box .box-text {
-      color: #333;
-      font-family: "Black Ops One", cursive;
-      position: absolute;
-      bottom: 30px;
-      left: 65px; }
-  .main-wrap .idea-expand {
-    font-size: 14pt;
-    width: 5px;
-    padding: 15px 20px;
-    background: white;
-    border-radius: 15px;
-    margin: 20px auto; }
-  .main-wrap .tweets {
-    margin: 30px 0; }
-  .main-wrap .button {
-    display: inline;
-    padding: 20px 15px;
-    margin: 40px auto;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px;
-    background-color: #fff;
-    transition: all 50ms; }
-    .main-wrap .button:hover {
-      background-color: #ddd;
-      cursor: pointer;
-      cursor: hand; }
-    .main-wrap .button:active {
-      transform: scale(1.1); }
-
-.keyword {
   margin: 100px auto;
 }
 
@@ -134,9 +91,8 @@ body {
 }
 
 .main-wrap .button {
-  display: flex;
-  height: 40px;
-  width: 170px;
+  display: inline;
+  padding: 20px 15px;
   margin: 40px auto;
   align-items: center;
   justify-content: center;
@@ -147,6 +103,8 @@ body {
 
 .main-wrap .button:hover {
   background-color: #63b4cf;
+  cursor: pointer;
+  cursor: hand;
 }
 
 .main-wrap .button:active {
@@ -165,20 +123,14 @@ body {
   background-repeat: no-repeat;
   display: block;
   transform: scale(0.05);
-  transition: all 50ms; }
-  .idea:hover {
-    background-color: #ddd;
-    border-color: #ddd;
-    cursor: pointer;
-    cursor: hand; }
-  .idea:active {
-    transform: scale(1.1); }
   transition: all 50ms;
 }
 
 .idea:hover {
   background-color: #63b4cf;
   border-color: #63b4cf;
+  cursor: pointer;
+  cursor: hand;
 }
 
 .idea:active {
