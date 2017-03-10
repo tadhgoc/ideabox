@@ -12,7 +12,7 @@ body {
 
 .main-wrap {
   width: 80%;
-  margin: 100px auto;
+  margin: 60px auto;
 }
 
 .main-wrap .box {
@@ -54,6 +54,7 @@ body {
 
 .main-wrap .idea-header {
   margin-bottom: 30px;
+  animation: fade 3s;
 }
 
 .main-wrap .idea-header .resources {
@@ -247,9 +248,20 @@ footer {
 
 @keyframes expand {
   0% {
-    width: 5px;
+    width: 0px;
+    opacity: 0;
   }
   100% {
     width: 80%;
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

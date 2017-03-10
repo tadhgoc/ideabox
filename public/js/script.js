@@ -92,6 +92,10 @@ function showIdea() {
   $('.idea-box').addClass("on");
   $('.idea').hide();
 
+  $('.idea-text').removeClass('hidden');
+  $('.resources').removeClass('hidden');
+
+
   var expIdea = document.getElementById("idea-expand");
   expIdea.addEventListener("webkitAnimationEnd", showIdeaText);
 }
@@ -99,8 +103,6 @@ function showIdea() {
 
 
 function showIdeaText() {
-  $('.idea-text').removeClass('hidden');
   $('.tweets').removeClass('hidden');
-  $('.resources').removeClass('hidden');
 
 }

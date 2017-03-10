@@ -27,7 +27,7 @@ body {
 .main-wrap {
 
   width: 80%;
-  margin: 100px auto;
+  margin: 60px auto;
   .box {
     border: $bg-color solid 1px; //REMOVE
     height: 150px;
@@ -75,6 +75,7 @@ body {
 
   .idea-header {
     margin-bottom: 30px;
+    animation: fade 3s;
 
     .resources {
       margin: 20px 0;
@@ -241,6 +242,11 @@ footer {
 }
 
 @keyframes expand {
-  0% {width: 5px;}
-  100% {width: 80%;}
+  0% {width: 0px; opacity: 0;}
+  100% {width: 80%; opacity: 1;}
+}
+
+@keyframes fade {
+from {opacity: 0;}
+to {opacity: 1;}
 }
