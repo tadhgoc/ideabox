@@ -42,7 +42,7 @@ function buildString(data) {
 
   $(".idea-text").html(result);
 
-  $('.tweets').append("How hot is <span class='keyword'>" + data.word + "</span>? Check out these tweets:");
+  $('.tweets').append("How hot is <span class='keyword'>" + data.word + "</span>?");
   buildTweet(data.word, '/api/twitter?count=3&q=');
   var lang = encodeURIComponent(data.language)
   buildResource(lang, 'api/resources?lang=', data.language);
@@ -58,10 +58,13 @@ function buildTweet(word, api) {
   .then(function (res) {
       res.json()
       .then(function (json) {
-        $.each(json, function(index, tweetId){
-          $('.tweets').append("<div class='solo-tweet' id='tweet" + index + "'></div>");
+        if (json.isFail) {
+          $('.tweets').append(" Not very hot! #FAIL");
+        }
+        $.each(json.tweets, function(index, tweetId){
+          $('.tweets').append(" Check out these tweets:<div class='solo-tweet' id='tweet" + index + "'></div>");
           var id = tweetId.toString();
-          console.log(id);
+          console.log('tweet id', id);
           makeTweet(index, id);
         });
       });
