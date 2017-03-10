@@ -59,10 +59,12 @@ function buildTweet(word, api) {
       res.json()
       .then(function (json) {
         if (json.isFail) {
-          $('.tweets').append(" Not very hot! #FAIL");
+          $('.tweets').append("<br/><br/>  <span class='fail'>Not very hot! #FAIL</span>");
+        } else {
+          $('.tweets').append(" Check out these tweets:");
         }
         $.each(json.tweets, function(index, tweetId){
-          $('.tweets').append(" Check out these tweets:<div class='solo-tweet' id='tweet" + index + "'></div>");
+          $('.tweets').append(" <div class='solo-tweet' id='tweet" + index + "'></div>");
           var id = tweetId.toString();
           console.log('tweet id', id);
           makeTweet(index, id);
