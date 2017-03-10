@@ -59,7 +59,7 @@ function buildTweet(word, api) {
       res.json()
       .then(function (json) {
         $.each(json, function(index, tweetId){
-          $('.tweets').append("<div id='tweet" + index + "'></div>");
+          $('.tweets').append("<div class='solo-tweet' id='tweet" + index + "'></div>");
           var id = tweetId.toString();
           console.log(id);
           makeTweet(index, id);
@@ -89,7 +89,7 @@ function tog() {
 
 function showIdea() {
   $('.idea-expand').removeClass("hidden");
-  $('.idea-expand').addClass("on");
+  $('.idea-box').addClass("on");
   $('.idea').hide();
 
   var expIdea = document.getElementById("idea-expand");
