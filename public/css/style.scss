@@ -27,9 +27,13 @@ body {
 .main-wrap {
 
   width: 80%;
+<<<<<<< 9e8a3a443ae1d52310d81b0e537dcf8c340184b6
   margin: 60px auto;
+=======
+  margin: 100px auto;
+  position: relative;
+>>>>>>> lightbulb
   .box {
-    border: $bg-color solid 1px; //REMOVE
     height: 150px;
     width: 250px;
     margin: 40px auto;
@@ -38,8 +42,6 @@ body {
     background-image: url('../box.png');
     background-size: contain;
     background-repeat: no-repeat;
-
-    z-index: 10;
 
     .box-text {
       color: $box-text-color;
@@ -157,7 +159,11 @@ body {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+  position: absolute;
   display: block;
+  top: 20%;
+  right: 45%;
+  z-index: -1;
   transform: scale(0.05);
   transition: all 50ms;
 
@@ -179,7 +185,7 @@ body {
 
 .fly {
   animation: fly 1s forwards;
-  animation-delay: .7s;
+  animation-delay: 1s;
 }
 
 
@@ -237,8 +243,9 @@ footer {
 }
 
 @keyframes fly {
-  0% {transform: scale(0.05); bottom: 0px;}
-  100% {transform: scale(1); bottom: 150px;}
+  0% {transform: scale(0.01);}
+  5% {z-index: 1;}
+  100% {transform: scale(1); top: -70px;; z-index: 1;}
 }
 
 @keyframes expand {
