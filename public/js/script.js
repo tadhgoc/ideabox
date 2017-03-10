@@ -18,6 +18,24 @@ function getData (api) {
     });
 }
 
+function buildResource(lang, api, fullName) {
+  api = api + lang;
+
+  fetch(api, {
+      method: 'GET'
+  })
+  .then(function (res) {
+      res.json()
+      .then(function (link) {
+        console.log(link, lang);
+        $('.resources').append("Get started with <a href='" +link +"' target='_blank' rel='no-follow'>" +fullName+ "</a>");
+
+      });
+  }).catch(function (err) {
+      console.error(err)
+  });
+}
+
 function buildString(data) {
   result = "Use <span class='keyword'>" + data.language + "</span> to make <span class='keyword'>" + data.word + "</span>";
   console.log(result);
@@ -26,12 +44,13 @@ function buildString(data) {
 
   $('.tweets').append("How hot is <span class='keyword'>" + data.word + "</span>? Check out these tweets:");
   buildTweet(data.word, '/api/twitter?count=3&q=');
+  var lang = encodeURIComponent(data.language)
+  buildResource(lang, 'api/resources?lang=', data.language);
 
 }
 
 function buildTweet(word, api) {
   api = api + word;
-  console.log(api);
 
   fetch(api, {
       method: 'GET'
@@ -82,5 +101,6 @@ function showIdea() {
 function showIdeaText() {
   $('.idea-text').removeClass('hidden');
   $('.tweets').removeClass('hidden');
+  $('.resources').removeClass('hidden');
 
 }
