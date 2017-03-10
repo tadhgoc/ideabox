@@ -69,9 +69,8 @@ body {
   }
 
   .button {
-    display: flex;
-    height: 40px;
-    width: 130px;
+    display: inline;
+    padding: 20px 15px;
 
     margin: 40px auto;
     align-items: center;
@@ -85,6 +84,8 @@ body {
 
     &:hover {
       background-color: $button-color-down;
+      cursor: pointer;
+      cursor: hand;
     }
 
     &:active {
@@ -114,18 +115,15 @@ body {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-
-  position: absolute;
   display: block;
-  bottom: 0px;
-
   transform: scale(0.05);
-
   transition: all 50ms;
 
   &:hover {
     background-color: $button-color-down;
     border-color: $button-color-down;
+    cursor: pointer;
+    cursor: hand;
   }
 
   &:active {
